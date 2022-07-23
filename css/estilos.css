@@ -1,0 +1,826 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Della+Respira&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    max-width: 100vw;
+    background-color: rgb(13, 13, 13);
+    scroll-behavior: smooth;
+}
+body{
+    font-family: monospace;
+}
+header{
+    height: 90vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.472),rgba(0, 0, 0, 0.887)),url(../img/videofondo.gif);
+    background-position: center;
+    display: grid;
+    grid-template-rows: repeat(6,1fr);
+}
+/* HEADER */
+.nav{
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px;
+}
+.logo{
+    color:rgb(210, 209, 209);
+    font-size: 45px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li{
+    list-style: none;
+    margin: 20px;
+}
+.menu li a{
+    text-decoration: none;
+    color: rgb(218, 217, 217);
+    font-size: 19px;
+    font-weight: bold;
+    transition: all 0.5s ease;   
+}
+.menu li a:hover{
+    padding: 5px 10px;
+    background-color: rgb(228, 228, 228);
+    color: black;
+    border-radius: 15px;
+}
+.descarga{
+    max-width: 30px;
+    margin-right: 10px
+}
+.descargas{
+    display: flex;
+    align-items: center;
+}
+.titulo{
+    grid-row: 4/6;
+    color: rgb(218, 218, 218);
+    display: flex;
+    justify-content: center;
+}
+.titulo h1{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 6rem;
+}
+.gradient{
+    background: linear-gradient(to right, rgb(162, 128, 194), rgb(70, 134, 245));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.subtitulo{
+    grid-row: 6/6;
+    color: rgb(171, 171, 171);
+    margin-bottom: 100px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+.animacion{
+    margin: 0 auto;
+    display: table;
+}
+h2{
+    float: left;
+    color: rgb(211, 211, 211);
+    position: relative;
+}
+h2 span{
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: rgb(0, 0, 0);
+    border-left: 1px solid rgb(131, 131, 131);
+
+    animation: maquina 2s infinite alternate steps(17);
+}
+@keyframes maquina{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 0;
+    }
+}
+/* MAIN */
+main{
+    margin-top: 20px;
+    background-color: rgb(70, 70, 70);
+}
+#conocimientos{
+    text-align: left ;
+    padding-top: 20px;
+}
+#conocimientos h3{
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+}
+.conocim{
+    background-color: #596e79;
+    border-radius: 10px; 
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+.galeria{
+    display: flex;
+    justify-content: center;
+}
+.imagenes{
+    text-align: center;
+}
+.imagenes img{
+    padding: 10px;
+    border-radius: 14px;
+    background-color:  #b4cdd2;
+    max-width: 100px;
+    margin: 20px;
+}
+.imagenes p{
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 20px;
+    font-size: 29px;
+    color: white;
+}
+
+/* Acerca de mi */
+#acercademi{
+    padding-top: 10px;
+}
+.container{
+    text-align: start;
+    margin-top: 100px;
+    margin-left: 10px;
+    background-color: rgb(52, 45, 59);
+    width: 1200px;
+    height: auto;
+    border-radius: 10px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+h3{
+    padding-top: 70px;
+    padding-left: 20px;
+    color: wheat;
+    font-size: 45px;
+    font-family: 'Bebas Neue', cursive;
+}
+p{
+    color: rgb(202, 225, 225);
+    font-size: 23px;
+}
+.parrafos{
+    text-align: start;
+    grid-column: 1/2;
+    margin-bottom: 70px;
+    text-align: start;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imagenpersonal{
+    grid-column: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imagenpersonal img{
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    max-width: 350px;
+    border-radius: 10px;
+    height: auto;
+}
+/* PROYECTOS */
+#proyectos{
+    padding-bottom:100px ;
+    padding-top:20px ;
+}
+.proyectos{
+    padding-top: 20px ;
+    margin-top: 100px;
+    margin-left: 10px;
+    margin-right: 40px;
+    border-radius: 10px;
+    background-color: #77987b;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.proyectos img{
+    border: 3px solid #9ec8a4;
+    border-radius: 12px;
+    width: 500px;
+    height: 300px;
+    margin: 50px;
+    cursor: pointer;
+}
+.transition{
+    transition: all 200ms;
+}
+.transition:hover{
+    width: 600px;
+    height: 320px;
+}
+.imagenUno{
+    grid-column: 1/2;
+    background-image: black;
+}
+.imagenUno a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenUno a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+    font-size: 20px;
+}
+.imagenDos{
+    grid-column: 2/2;
+}
+.imagenDos a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenDos a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+
+    font-size: 20px;
+}
+.imagenTres{
+    grid-column: 1/2;
+}
+.imagenTres a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenTres a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+    font-size: 20px;
+}
+.imagenCuatro{
+    grid-column: 2/2;
+}
+.imagenCuatro a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.imagenCuatro a:hover{
+    text-decoration: none;
+    color: rgb(59, 79, 100);
+    font-size: 20px;
+}
+h4{
+    color: wheat;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive; 
+    height: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+#descripcion{
+    margin-left: 20px;
+    max-width: 500px;
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+}
+#descripcion a{
+    margin-bottom: 100px;
+}
+/* FOOTER */
+footer{
+    background-color: #1d1d1d;
+}
+.contactoapps{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contactoapps p{
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(200, 195, 195);
+}
+.contactoapps img{
+    max-width: 50px;
+}
+#logofooter{
+    max-width: 800px;
+}
+.aplicaciones{
+    display: grid;
+}
+.instagram{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkedin{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linkedin p{
+    padding-left: 20px;
+}
+.github{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wpp{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gmail{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width:1288px ){
+    .proyectos img{
+        border: 3px solid rgb(159, 159, 159);
+        border-radius: 12px;
+        width: 500px;
+        height: 300px;
+        margin: 50px;
+        cursor: pointer;
+    }
+    .transition{
+        transition: all 200ms;
+    }
+    .transition:hover{
+        width: 510px;
+        height: 310px;
+    }
+}
+@media (max-width:1288px ){
+    .proyectos img{
+        border: 3px solid rgb(159, 159, 159);
+        border-radius: 12px;
+        width: 300px;
+        height: 200px;
+        margin: 50px;
+        cursor: pointer;
+    }
+    .transition{
+        transition: all 200ms;
+    }
+    .transition:hover{
+        width: 400px;
+        height: 200px;
+    }
+}
+@media (max-width:1200px){
+    .container{
+        text-align: center;
+        margin-top: 100px;
+        margin-left: 10px;
+        background-color: rgb(52, 45, 59);
+        width: 1000px;
+        height: auto;
+        border-radius: 10px;
+    }
+    #conocimientos{
+        text-align: left ;
+        padding-top: 20px;
+    }
+    #conocimientos h3{
+        font-size: 40px;
+        font-family: 'Bebas Neue', cursive;
+    }
+    .conocim{
+        background-color: #596e79;
+        border-radius: 10px; 
+        margin-top: 100px;
+        margin-left: 10px;
+        margin-right: 40px;
+    }
+    .galeria{
+        display: flex;
+        justify-content: center;
+    }
+    .imagenes{
+        text-align: center;
+    }
+    .imagenes img{
+        padding: 20px;
+        border-radius: 14px;
+        background-color:  #b4cdd2;
+        max-width: 100px;
+        margin: 20px;
+    }
+    .imagenes p{
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: white;
+    }
+}
+@media (max-width:1119px){
+    .nav{
+        position: fixed;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 13px;
+    }
+    .container{
+        text-align: start;
+        margin-top: 100px;
+        margin-left: 10px;
+        background-color: rgb(52, 45, 59);
+        width: 700px;
+        height: auto;
+        border-radius: 10px;
+    }
+    .imagenpersonal img{
+        border-radius: 10px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+        max-width: 200px;
+        border-radius: 10px;
+        height: auto;
+    }
+    #logofooter{
+        max-width: 800px;
+    }
+    .aplicaciones{
+        position: relative;
+        margin-right: 90px;
+        display: grid;
+    }
+}
+@media (max-width: 965px){
+    .aplicaciones{
+        position: relative;
+        margin-right: 150px;
+        display: grid;
+    }
+}
+@media (max-width: 876px){
+    .nav{
+        position: absolute;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px;
+    }
+    .logo{
+        color:rgb(210, 209, 209);
+        font-size: 45px;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    li{
+        list-style: none;
+        margin: 20px;
+    }
+    .menu li a{
+        text-decoration: none;
+        color: rgb(218, 217, 217);
+        font-size: 19px;
+        font-weight: bold;
+        transition: all 0.5s ease;   
+    }
+    .menu li a:hover{
+        padding: 5px 10px;
+        background-color: rgb(228, 228, 228);
+        color: black;
+        border-radius: 15px;
+    }
+    .descarga{
+        max-width: 30px;
+        margin-right: 10px
+    }
+    .descargas{
+        display: flex;
+        align-items: center;
+    }
+    .titulo{
+        padding-top: 100px;
+        padding-bottom: 20px;
+        grid-row: 4/6;
+        color: rgb(218, 218, 218);
+        display: flex;
+        justify-content: center;
+    }
+    .titulo h1{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 4rem;
+    }
+    .gradient{
+        background: linear-gradient(to right, rgb(162, 128, 194), rgb(70, 134, 245));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: cover;
+    }
+    .subtitulo{
+        grid-row: 6/6;
+        color: rgb(171, 171, 171);
+        margin-bottom: 100px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .animacion{
+        margin: 0 auto;
+        display: table;
+    }
+    h2{
+        float: left;
+        color: rgb(211, 211, 211);
+        position: relative;
+    }
+    h2 span{
+        position: absolute;
+        right: 0;
+        width: 0;
+        background: rgb(0, 0, 0);
+        border-left: 1px solid rgb(131, 131, 131);
+    
+        animation: maquina 2s infinite alternate steps(17);
+    }
+    @keyframes maquina{
+        from{
+            width: 100%;
+        }
+        to{
+            width: 0;
+        }
+    }
+}
+@media (max-width: 1007px){
+    .conocim{
+        background-color: #596e79;
+        border-radius: 10px; 
+        margin-top: 100px;
+        margin-left: 5px;
+        margin-right: 20px;
+    }
+    .galeria{
+        display: grid;
+    }
+    .imagenes{
+        text-align: center;
+    }
+    .imagenes img{
+        padding: 20px;
+        border-radius: 14px;
+        background-color:  #b4cdd2;
+        max-width: 150px;
+        margin: 20px;
+    }
+    .imagenes p{
+        font-family: 'Bebas Neue', cursive;
+        margin-bottom: 20px;
+        font-size: 29px;
+        color: white;
+    }
+}
+@media (max-width: 864px){
+    .container{
+        text-align: center;
+        margin-top: 100px;
+        margin-right: 200px;
+        background-color: rgb(52, 45, 59);
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .grid{
+        display: inline;
+        background-color: rgb(52, 45, 59);
+    }
+    #proyectos{
+        padding-bottom:100px ;
+        padding-top:20px ;
+    }
+    .proyectos{
+        padding-top: 20px ;
+        margin-top: 100px;
+        margin-left: 10px;
+        margin-right: 40px;
+        border-radius: 10px;
+        background-color: #77987b;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .proyecto-flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .proyectos img{
+        border: 3px solid #9ec8a4;
+        border-radius: 12px;
+        width: 500px;
+        height: 300px;
+        margin: 50px;
+        cursor: pointer;
+    }
+    .transition{
+        transition: all 200ms;
+    }
+    .transition:hover{
+        width: 510px;
+        height: 310px;
+    }
+    .imagenUno{
+        grid-column: 1/2;
+        background-image: black;
+    }
+    .imagenUno a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .imagenUno a:hover{
+        text-decoration: none;
+        color: rgb(59, 79, 100);
+        font-size: 20px;
+    }
+    .imagenDos{
+        grid-column: 1/2;
+    }
+    .imagenDos a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .imagenDos a:hover{
+        text-decoration: none;
+        color: rgb(59, 79, 100);
+    
+        font-size: 20px;
+    }
+    .imagenTres{
+        grid-column: 1/2;
+    }
+    .imagenTres a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .imagenTres a:hover{
+        text-decoration: none;
+        color: rgb(59, 79, 100);
+        font-size: 20px;
+    }
+    .imagenCuatro{
+        grid-column: 1/2;
+    }
+    .imagenCuatro a{
+        text-decoration: none;
+        color: white;
+        font-size: 20px;
+    }
+    .imagenCuatro a:hover{
+        text-decoration: none;
+        color: rgb(59, 79, 100);
+        font-size: 20px;
+    }
+    h4{
+        color: wheat;
+        font-size: 40px;
+        font-family: 'Bebas Neue', cursive; 
+        height: 20px;
+        padding-top: 20px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+    #descripcion{
+        margin-left: 20px;
+        max-width: 500px;
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+    }
+    #descripcion a{
+        margin-bottom: 100px;
+    }
+    footer{
+        background-color: #1d1d1d;
+        display: flex;
+        flex-direction: column;
+    }
+    .contactoapps{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contactoapps p{
+        font-weight: lighter;
+        font-size: 20px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb(200, 195, 195);
+    }
+    .contactoapps img{
+        max-width: 50px;
+    }
+    #logofooter{
+        position:relative;
+        max-width: 400px;
+        margin: 20px;
+        right: 10rem;
+        
+    }
+    .instagram{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .linkedin{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .linkedin p{
+        padding-left: 20px;
+    }
+    .github{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .wpp{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .gmail{
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+@media (max-width: 551px){
+    .titulo h1{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 2rem;
+    }
+    .proyectos img{
+        border: 3px solid #9ec8a4;
+        border-radius: 12px;
+        width: 200px;
+        height: 150px;
+        margin: 20px;
+        cursor: pointer;
+    }
+    .transition:hover{
+        width: 210px;
+        height: 160px;
+    }
+}
